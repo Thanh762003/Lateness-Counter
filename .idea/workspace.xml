@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9253e8c5-7b05-49a9-b490-384bebb2c294" name="Changes" comment="Detect face">
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="9253e8c5-7b05-49a9-b490-384bebb2c294" name="Changes" comment="Remove redundant funcs" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,11 +58,20 @@
       <option name="project" value="LOCAL" />
       <updated>1731245466955</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Remove redundant funcs">
+      <option name="closed" value="true" />
+      <created>1731245726352</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731245726352</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Detect face" />
-    <option name="LAST_COMMIT_MESSAGE" value="Detect face" />
+    <MESSAGE value="Remove redundant funcs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove redundant funcs" />
   </component>
 </project>
