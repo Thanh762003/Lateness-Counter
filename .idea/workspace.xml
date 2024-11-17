@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9253e8c5-7b05-49a9-b490-384bebb2c294" name="Changes" comment="Update workspace">
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+    <list default="true" id="9253e8c5-7b05-49a9-b490-384bebb2c294" name="Changes" comment="Face detection using mediapipe">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/haarcascade_frontalface_default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,13 +87,22 @@
       <option name="project" value="LOCAL" />
       <updated>1731249958885</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Face detection using mediapipe">
+      <option name="closed" value="true" />
+      <created>1731753047837</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731753047837</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Detect face" />
     <MESSAGE value="Remove redundant funcs" />
     <MESSAGE value="Update workspace" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update workspace" />
+    <MESSAGE value="Face detection using mediapipe" />
+    <option name="LAST_COMMIT_MESSAGE" value="Face detection using mediapipe" />
   </component>
 </project>

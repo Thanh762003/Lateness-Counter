@@ -1,29 +1,31 @@
+import mediapipe as mp
 import cv2
 
-# Method to draw boundary around the detected feature
-def draw_boundary(img, classifier, scale_factor, min_neighbors, text):
-    # Converting image to gray-scale
-    gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    # detecting features in gray-scale image, returns coordinates, width and height of features
-    features = classifier.detectMultiScale(gray_img, scale_factor, min_neighbors)
-    # drawing rectangle around the feature and labeling it
-    for (x, y, w, h) in features:
-        cv2.rectangle(img, (x,y), (x+w, y+h), (0,0,255), 2)
-        cv2.putText(img, text, (x, y-4), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0,0,255), 1, cv2.LINE_AA)
-
-    return img
-
-# Loading classifiers
-faceCascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-
 cap = cv2.VideoCapture(0)
+mp_face_detection = mp.solutions.face_detection
 
-while True:
-    _, img = cap.read()
-    img = draw_boundary(img, faceCascade, 1.1, 10, "Human")
-    cv2.imshow("counter", img)
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
+with mp_face_detection.FaceDetection(model_selection=1, min_detection_confidence=0.5) as face_detection:
+    while True:
+        ret, img = cap.read()
+        if not ret:
+            break
+
+        results = face_detection.process(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+        cnt = 0
+
+        if results.detections:
+            cnt = len(results.detections)
+            for detection in results.detections:
+                box = detection.location_data.relative_bounding_box
+                x1, y1 = int(box.xmin * img.shape[1]), int(box.ymin * img.shape[0])
+                x2, y2 = int((box.xmin + box.width) * img.shape[1]), int((box.ymin + box.height) * img.shape[0])
+                img = cv2.rectangle(img, (x1, y1), (x2, y2), (0,0,255), 2)
+
+        cv2.putText(img, f'Attendance count: {cnt}', (20, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 2)
+        cv2.imshow("counter", img)
+
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
 
 cap.release()
 cv2.destroyAllWindows()
