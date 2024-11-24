@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9253e8c5-7b05-49a9-b490-384bebb2c294" name="Changes" comment="Resize image and add trained model">
-      <change afterPath="$PROJECT_DIR$/best.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/desk.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yolov9c.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/classroom-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/classroom-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/classroom-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/classroom-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/classroom-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/classroom-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/classroom-with-students.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +51,7 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/static/images" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -107,7 +110,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731855293167</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Resize image and add trained model">
+      <option name="closed" value="true" />
+      <created>1732465683159</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732465683159</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
