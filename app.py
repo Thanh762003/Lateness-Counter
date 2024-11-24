@@ -10,6 +10,7 @@ def generate_frames():
     camera = cv2.VideoCapture(0)
     while True:
         success, frame = camera.read()
+        frame = cv2.resize(frame, (1120, 640))
 
         if not success:
             break
