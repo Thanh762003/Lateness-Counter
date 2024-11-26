@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block head %}
-<title>Class Attendance</title>
+<title>Attendance Count</title>
 {% endblock %}
 
 {% block body %}
@@ -9,32 +9,24 @@
     <h1>LIVE Attendance Count</h1>
 </header>
 
-<form style="margin-block: 32px" action="/toggle-stream" method="post">
-    <div style="margin-bottom: 16px">
-        <label for="hour-start">Class starts at:</label>
-        <input class="time-input" style="width: 48px" placeholder="Hr" id="hour-start" name="hour-start">
-        <label for="minute-start">:</label>
-        <input class="time-input" style="width: 48px" placeholder="Min" id="minute-start" name="minute-start">
-    </div>
+<form action="/toggle-stream" method="post">
+    <!--    <label for="uploader">Draw</label>-->
+    <!--    <input id="uploader" type="file">-->
 
-    <div style="margin-bottom: 16px">
-        <label for="hour-start">Class ends at:</label>
-        <input class="time-input" style="width: 48px" placeholder="Hr" id="hour-end" name="hour-end">
-        <label for="minute-start">:</label>
-        <input class="time-input" style="width: 48px" placeholder="Min" id="minute-end" name="minute-end">
-    </div>
-
-    <div style="margin-bottom: 16px">
-        <label for="interval">Take snapshot every:</label>
-        <input class="time-input" style="width: 48px" placeholder="Min" id="interval" name="interval">
-    </div>
-
-    <button class="start-btn">
-        Start/Stop Camera
+    <button class="btn">
+        {% if is_streaming %}
+        Stop Streaming
+        {% else %}
+        Start Streaming
+        {% endif %}
     </button>
 </form>
 
-<div style="border-radius: 16px; overflow: hidden">
-    <img src="{{ url_for('stream') }}" width="720" alt="Video Capture">
+<div class="stream-box">
+    {% if is_streaming %}
+    <img src="{{ url_for('stream') }}" width="100%" alt="Video Capture">
+    {% else %}
+    <canvas id="canvas" class="idle-box">
+    {% endif %}
 </div>
 {% endblock %}

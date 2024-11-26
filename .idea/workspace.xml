@@ -4,16 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9253e8c5-7b05-49a9-b490-384bebb2c294" name="Changes" comment="Resize image and add trained model">
-      <change afterPath="$PROJECT_DIR$/static/images/classroom-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/classroom-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/classroom-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/classroom-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/classroom-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/classroom-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/classroom-with-students.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+    <list default="true" id="9253e8c5-7b05-49a9-b490-384bebb2c294" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face-detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/face-detection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/person-detection.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,17 +38,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.app.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.app.executor": "Run",
+    "Python.face-detection.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.test.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/scripts" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/static/images" />
     </key>
@@ -118,7 +119,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732465683159</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add test file for testing and comparing models">
+      <option name="closed" value="true" />
+      <created>1732469398784</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1732469398784</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -128,6 +137,7 @@
     <MESSAGE value="Face detection using mediapipe" />
     <MESSAGE value="Use mediapipe as main method for face detection" />
     <MESSAGE value="Resize image and add trained model" />
-    <option name="LAST_COMMIT_MESSAGE" value="Resize image and add trained model" />
+    <MESSAGE value="Add test file for testing and comparing models" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add test file for testing and comparing models" />
   </component>
 </project>

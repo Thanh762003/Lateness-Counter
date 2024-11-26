@@ -28,10 +28,29 @@ body {
     border: 1px solid black;
 }
 
-.start-btn {
+.stream-box {
+    width: 960px;
+    height: 540px;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-top: 32px;
+}
+
+.idle-box {
     width: 100%;
-    padding-block: 8px;
+    height: 100%;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    width: 100%;
+    padding: 8px 16px;
     border-radius: 6px;
     border: none;
     font-weight: 700;
+    margin-top: 32px;
+    width: fit-content
 }
