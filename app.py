@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request, redirect, Response, send_from_directory
+from flask import Flask, render_template, redirect, Response
+from person_detection import HumanCount
 import cv2
 
 app = Flask(__name__)
@@ -8,17 +9,15 @@ is_streaming = False
 # poly = [(0,0),(960,0),(960,540),(0,540)]
 
 def generate_frames():
-    camera = cv2.VideoCapture(0)
+    counter = HumanCount("yolov9c.pt")
+    cap = cv2.VideoCapture(0)
+
     while True:
-        success, frame = camera.read()
-        # frame = cv2.resize(frame, (960, 540))
+        ret, frame = cap.read()
+        if not ret:
+            continue
 
-        if not success:
-            break
-        else:
-            _, buffer = cv2.imencode(".jpg", frame)
-            frame = buffer.tobytes()
-
+        frame = counter.show(frame)
         yield (b"--frame\r\n"
                b"Content-Type: image/jpeg\r\n\r\n" + frame + b"\r\n")
 
