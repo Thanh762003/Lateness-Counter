@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Upload Image</title>
+{% endblock %}
+
+{% block body %}
+<header style="width: 100%">
+    <nav style="display: flex; gap: 24px; margin-bottom: 16px; width: 100%; font-size: 18px">
+        <a href="/">Stream</a>
+        <a href="/upload">Upload</a>
+    </nav>
+    <h1 style="text-align: center">Image Human Counter</h1>
+</header>
+
+<p style="margin-top: 32px; font-size: 18px">
+    Counted: {{count}}
+</p>
+
+<div style="width: 100%; display: flex; gap: 64px; min-height: 480px; margin-top: 32px">
+    <div style="flex: 1; height: 100%; border: 1px solid black; border-radius: 16px; overflow: hidden" id="img-area">
+        {% if org_img %}
+        <img src="data:image/jpeg;base64,{{ org_img }}" alt="Original Image">
+        {% endif %}
+    </div>
+
+    <div style="flex: 1; height: 100%; border: 1px solid black; border-radius: 16px; overflow: hidden">
+        {% if encoded_img %}
+        <img src="data:image/jpeg;base64,{{ encoded_img }}" alt="Processed Image">
+        {% endif %}
+    </div>
+</div>
+
+<form action="/upload" method="post" enctype="multipart/form-data">
+    <input id="uploader" type="file" accept="image/*" name="uploaded-img">
+    <button class="btn">Count</button>
+</form>
+{% endblock %}

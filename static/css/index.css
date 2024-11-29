@@ -12,6 +12,12 @@ body {
     line-height: 1.5;
 }
 
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
 .container {
     padding: 32px 24px;
     margin-inline: auto;
